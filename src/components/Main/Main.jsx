@@ -1,7 +1,9 @@
 import CardDate from "../CardDate/CardDate";
 import CardItem from "../CardItem/CardItem";
-
+import MainColumn from "../MainColumn/MainColumn";
+import Cards from "../Cards/Cards";
 function Main() {
+  // без статуса
   let tasksWithoutStatus = [
     {
       color: "_orange",
@@ -35,6 +37,46 @@ function Main() {
     },
   ];
 
+  // нужно сделать
+  let tasksTodo = [
+    {
+      color: "_orange",
+      theme: "Веб-дизайн",
+      title: "Задача 1",
+      date: "30.10.23",
+    },
+  ];
+
+  // в работе
+  let inWorkTasks = [
+    {
+      color: "_orange",
+      theme: "Веб-дизайн",
+      title: "Задача 1",
+      date: "30.10.23",
+    },
+  ];
+
+  // Тестирование
+  let testingTasks = [
+    {
+      color: "_orange",
+      theme: "Веб-дизайн",
+      title: "Задача 1",
+      date: "30.10.23",
+    },
+  ];
+
+  // готово
+  let completedTasks = [
+    {
+      color: "_orange",
+      theme: "Веб-дизайн",
+      title: "Задача 1",
+      date: "30.10.23",
+    },
+  ];
+
   return (
     <main class="main">
       <div class="container">
@@ -42,22 +84,9 @@ function Main() {
           <div class="main__content">
             {/* колонка без статуса */}
 
-            <div class="main__column column">
-              <div class="column__title">
-                <p>Без статуса</p>
-              </div>
-
-              <div class="cards">
-                {tasksWithoutStatus.map((el) => (
-                  <CardItem
-                    color={el.color}
-                    theme={el.theme}
-                    title={el.title}
-                    date={el.date}
-                  />
-                ))}
-              </div>
-            </div>
+            <MainColumn title="Без статуса">
+              <Cards array={tasksWithoutStatus} />
+            </MainColumn>
 
             {/* колонка нужно сделать  */}
             <div class="main__column">
