@@ -1,8 +1,24 @@
-import "./App.css";
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
 
-function App() {
-  return (
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/main_dark.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,700;8..144,800;8..144,900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kanban</title>
+  </head>
+  <body>
     <div class="wrapper">
+      <!-- pop-up start-->
+
       <div class="pop-exit" id="popExit">
         <div class="pop-exit__container">
           <div class="pop-exit__block">
@@ -12,10 +28,10 @@ function App() {
             <form class="pop-exit__form" id="formExit" action="#">
               <div class="pop-exit__form-group">
                 <button class="pop-exit__exit-yes _hover01" id="exitYes">
-                  <a href="modal/signin.html">Да, выйти</a>{" "}
+                  <a href="modal/signin.html">Да, выйти</a>
                 </button>
                 <button class="pop-exit__exit-no _hover03" id="exitNo">
-                  <a href="main.html">Нет, остаться</a>{" "}
+                  <a href="main.html">Нет, остаться</a>
                 </button>
               </div>
             </form>
@@ -28,9 +44,7 @@ function App() {
           <div class="pop-new-card__block">
             <div class="pop-new-card__content">
               <h3 class="pop-new-card__ttl">Создание задачи</h3>
-              <a href="#" class="pop-new-card__close">
-                &#10006;
-              </a>
+              <a href="#" class="pop-new-card__close">&#10006;</a>
               <div class="pop-new-card__wrap">
                 <form
                   class="pop-new-card__form form-new"
@@ -38,9 +52,9 @@ function App() {
                   action="#"
                 >
                   <div class="form-new__block">
-                    <label for="formTitle" class="subttl">
-                      Название задачи
-                    </label>
+                    <label for="formTitle" class="subttl"
+                      >Название задачи</label
+                    >
                     <input
                       class="form-new__input"
                       type="text"
@@ -51,9 +65,7 @@ function App() {
                     />
                   </div>
                   <div class="form-new__block">
-                    <label for="textArea" class="subttl">
-                      Описание задачи
-                    </label>
+                    <label for="textArea" class="subttl">Описание задачи</label>
                     <textarea
                       class="form-new__area"
                       name="text"
@@ -75,7 +87,9 @@ function App() {
                             height="11"
                             viewBox="0 0 6 11"
                           >
-                            <path d="M5.72945 1.95273C6.09018 1.62041 6.09018 1.0833 5.72945 0.750969C5.36622 0.416344 4.7754 0.416344 4.41218 0.750969L0.528487 4.32883C-0.176162 4.97799 -0.176162 6.02201 0.528487 6.67117L4.41217 10.249C4.7754 10.5837 5.36622 10.5837 5.72945 10.249C6.09018 9.9167 6.09018 9.37959 5.72945 9.04727L1.87897 5.5L5.72945 1.95273Z" />
+                            <path
+                              d="M5.72945 1.95273C6.09018 1.62041 6.09018 1.0833 5.72945 0.750969C5.36622 0.416344 4.7754 0.416344 4.41218 0.750969L0.528487 4.32883C-0.176162 4.97799 -0.176162 6.02201 0.528487 6.67117L4.41217 10.249C4.7754 10.5837 5.36622 10.5837 5.72945 10.249C6.09018 9.9167 6.09018 9.37959 5.72945 9.04727L1.87897 5.5L5.72945 1.95273Z"
+                            />
                           </svg>
                         </div>
                         <div class="nav__action" data-action="next">
@@ -85,7 +99,9 @@ function App() {
                             height="11"
                             viewBox="0 0 6 11"
                           >
-                            <path d="M0.27055 9.04727C-0.0901833 9.37959 -0.0901832 9.9167 0.27055 10.249C0.633779 10.5837 1.2246 10.5837 1.58783 10.249L5.47151 6.67117C6.17616 6.02201 6.17616 4.97799 5.47151 4.32883L1.58782 0.75097C1.2246 0.416344 0.633778 0.416344 0.270549 0.75097C-0.0901831 1.0833 -0.090184 1.62041 0.270549 1.95273L4.12103 5.5L0.27055 9.04727Z" />
+                            <path
+                              d="M0.27055 9.04727C-0.0901833 9.37959 -0.0901832 9.9167 0.27055 10.249C0.633779 10.5837 1.2246 10.5837 1.58783 10.249L5.47151 6.67117C6.17616 6.02201 6.17616 4.97799 5.47151 4.32883L1.58782 0.75097C1.2246 0.416344 0.633778 0.416344 0.270549 0.75097C-0.0901831 1.0833 -0.090184 1.62041 0.270549 1.95273L4.12103 5.5L0.27055 9.04727Z"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -110,7 +126,7 @@ function App() {
                         <div class="calendar__cell _cell-day _weekend">3</div>
                         <div class="calendar__cell _cell-day">4</div>
                         <div class="calendar__cell _cell-day">5</div>
-                        <div class="calendar__cell _cell-day ">6</div>
+                        <div class="calendar__cell _cell-day">6</div>
                         <div class="calendar__cell _cell-day">7</div>
                         <div class="calendar__cell _cell-day _current">8</div>
                         <div class="calendar__cell _cell-day _weekend">9</div>
@@ -148,7 +164,7 @@ function App() {
                     />
                     <div class="calendar__period">
                       <p class="calendar__p date-end">
-                        Выберите срок исполнения{" "}
+                        Выберите срок исполнения
                         <span class="date-control"></span>.
                       </p>
                     </div>
@@ -183,7 +199,9 @@ function App() {
             <div class="pop-browse__content">
               <div class="pop-browse__top-block">
                 <h3 class="pop-browse__ttl">Название задачи</h3>
-                <div class="categories__theme theme-top _orange _active-category">
+                <div
+                  class="categories__theme theme-top _orange _active-category"
+                >
                   <p class="_orange">Web Design</p>
                 </div>
               </div>
@@ -214,9 +232,9 @@ function App() {
                   action="#"
                 >
                   <div class="form-browse__block">
-                    <label for="textArea01" class="subttl">
-                      Описание задачи
-                    </label>
+                    <label for="textArea01" class="subttl"
+                      >Описание задачи</label
+                    >
                     <textarea
                       class="form-browse__area"
                       name="text"
@@ -239,7 +257,9 @@ function App() {
                             height="11"
                             viewBox="0 0 6 11"
                           >
-                            <path d="M5.72945 1.95273C6.09018 1.62041 6.09018 1.0833 5.72945 0.750969C5.36622 0.416344 4.7754 0.416344 4.41218 0.750969L0.528487 4.32883C-0.176162 4.97799 -0.176162 6.02201 0.528487 6.67117L4.41217 10.249C4.7754 10.5837 5.36622 10.5837 5.72945 10.249C6.09018 9.9167 6.09018 9.37959 5.72945 9.04727L1.87897 5.5L5.72945 1.95273Z" />
+                            <path
+                              d="M5.72945 1.95273C6.09018 1.62041 6.09018 1.0833 5.72945 0.750969C5.36622 0.416344 4.7754 0.416344 4.41218 0.750969L0.528487 4.32883C-0.176162 4.97799 -0.176162 6.02201 0.528487 6.67117L4.41217 10.249C4.7754 10.5837 5.36622 10.5837 5.72945 10.249C6.09018 9.9167 6.09018 9.37959 5.72945 9.04727L1.87897 5.5L5.72945 1.95273Z"
+                            />
                           </svg>
                         </div>
                         <div class="nav__action" data-action="next">
@@ -249,7 +269,9 @@ function App() {
                             height="11"
                             viewBox="0 0 6 11"
                           >
-                            <path d="M0.27055 9.04727C-0.0901833 9.37959 -0.0901832 9.9167 0.27055 10.249C0.633779 10.5837 1.2246 10.5837 1.58783 10.249L5.47151 6.67117C6.17616 6.02201 6.17616 4.97799 5.47151 4.32883L1.58782 0.75097C1.2246 0.416344 0.633778 0.416344 0.270549 0.75097C-0.0901831 1.0833 -0.090184 1.62041 0.270549 1.95273L4.12103 5.5L0.27055 9.04727Z" />
+                            <path
+                              d="M0.27055 9.04727C-0.0901833 9.37959 -0.0901832 9.9167 0.27055 10.249C0.633779 10.5837 1.2246 10.5837 1.58783 10.249L5.47151 6.67117C6.17616 6.02201 6.17616 4.97799 5.47151 4.32883L1.58782 0.75097C1.2246 0.416344 0.633778 0.416344 0.270549 0.75097C-0.0901831 1.0833 -0.090184 1.62041 0.270549 1.95273L4.12103 5.5L0.27055 9.04727Z"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -274,10 +296,12 @@ function App() {
                         <div class="calendar__cell _cell-day _weekend">3</div>
                         <div class="calendar__cell _cell-day">4</div>
                         <div class="calendar__cell _cell-day">5</div>
-                        <div class="calendar__cell _cell-day ">6</div>
+                        <div class="calendar__cell _cell-day">6</div>
                         <div class="calendar__cell _cell-day">7</div>
                         <div class="calendar__cell _cell-day _current">8</div>
-                        <div class="calendar__cell _cell-day _weekend _active-day">
+                        <div
+                          class="calendar__cell _cell-day _weekend _active-day"
+                        >
                           9
                         </div>
                         <div class="calendar__cell _cell-day _weekend">10</div>
@@ -314,7 +338,7 @@ function App() {
                     />
                     <div class="calendar__period">
                       <p class="calendar__p date-end">
-                        Срок исполнения:{" "}
+                        Срок исполнения:
                         <span class="date-control">09.09.23</span>
                       </p>
                     </div>
@@ -327,7 +351,7 @@ function App() {
                   <p class="_orange">Web Design</p>
                 </div>
               </div>
-              <div class="pop-browse__btn-browse ">
+              <div class="pop-browse__btn-browse">
                 <div class="btn-group">
                   <button class="btn-browse__edit _btn-bor _hover03">
                     <a href="#">Редактировать задачу</a>
@@ -368,26 +392,27 @@ function App() {
         <div class="container">
           <div class="header__block">
             <div class="header__logo _show _light">
-              <a href="" target="_self">
-                <img src="../public/images/logo.png" alt="logo" />
-              </a>
+              <a href="" target="_self"
+                ><img src="images/logo.png" alt="logo"
+              /></a>
             </div>
             <div class="header__logo _dark">
-              <a href="" target="_self">
-                <img src="images/logo_dark.png" alt="logo" />
-              </a>
+              <a href="" target="_self"
+                ><img src="images/logo_dark.png" alt="logo"
+              /></a>
             </div>
             <nav class="header__nav">
-              <button className="header__btn-main-new _hover01" id="btnMainNew">
+              <button class="header__btn-main-new _hover01" id="btnMainNew">
                 <a href="#popNewCard">Создать новую задачу</a>
               </button>
-              <a href="#user-set-target" class="header__user _hover02">
-                Ivan Ivanov
-              </a>
+              <a href="#user-set-target" class="header__user _hover02"
+                >Ivan Ivanov</a
+              >
               <div
                 class="header__pop-user-set pop-user-set"
                 id="user-set-target"
               >
+                <!-- <a href="">x</a> -->
                 <p class="pop-user-set__name">Ivan Ivanov</p>
                 <p class="pop-user-set__mail">ivan.ivanov@gmail.com</p>
                 <div class="pop-user-set__theme">
@@ -1024,7 +1049,7 @@ function App() {
         </div>
       </main>
     </div>
-  );
-}
 
-export default App;
+    <script src="js/script.js"></script>
+  </body>
+</html>
