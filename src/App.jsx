@@ -369,7 +369,7 @@ function App() {
           <div class="header__block">
             <div class="header__logo _show _light">
               <a href="" target="_self">
-                <img src="../public/images/logo.png" alt="logo" />
+                <img src="/../public/images/logo.png" alt="logo" />
               </a>
             </div>
             <div class="header__logo _dark">
