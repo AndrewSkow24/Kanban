@@ -1,4 +1,26 @@
+import { useState } from "react";
+
 function Header() {
+  const [userProfileIsOpen, setUserProfileIsOpen] = useState(false);
+
+  const modalWindowUser = document.getElementsByClassName(
+    "header__pop-user-set"
+  );
+
+  const handleUserProfileIsOpen = () => {
+    console.log("Нажато на фамилию");
+
+    if (userProfileIsOpen === true) {
+      console.log(modalWindowUser[0]);
+      modalWindowUser[0].style.display = "block";
+    } else {
+      modalWindowUser[0].style.display = "none";
+    }
+
+    setUserProfileIsOpen(!userProfileIsOpen);
+    console.log("Окно открыто ", userProfileIsOpen);
+  };
+
   return (
     <header class="header">
       <div class="container">
@@ -17,7 +39,11 @@ function Header() {
             <button className="header__btn-main-new _hover01" id="btnMainNew">
               <a href="#popNewCard">Создать новую задачу</a>
             </button>
-            <a href="#user-set-target" class="header__user _hover02">
+            <a
+              href="#user-set-target"
+              onClick={handleUserProfileIsOpen}
+              class="header__user _hover02"
+            >
               Ivan Ivanov
             </a>
             <div class="header__pop-user-set pop-user-set" id="user-set-target">
