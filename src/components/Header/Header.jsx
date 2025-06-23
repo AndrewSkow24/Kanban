@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Header() {
+function Header({ addFunction }) {
   const [userProfileIsOpen, setUserProfileIsOpen] = useState(false);
 
   const modalWindowUser = document.getElementsByClassName(
@@ -37,7 +37,9 @@ function Header() {
           </div>
           <nav class="header__nav">
             <button className="header__btn-main-new _hover01" id="btnMainNew">
-              <a href="#popNewCard">Создать новую задачу</a>
+              <a href="#popNewCard" onClick={addFunction}>
+                Создать новую задачу
+              </a>
             </button>
             <a
               href="#user-set-target"

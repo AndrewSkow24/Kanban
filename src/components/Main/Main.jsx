@@ -1,10 +1,10 @@
 import MainColumn from "../MainColumn/MainColumn";
 import Cards from "../Cards/Cards";
-import { cardList, statusList } from "/data.js";
+import { statusList } from "/data.js";
 
-function Main() {
-  console.log(cardList);
-  console.log(statusList);
+function Main({ arrayList }) {
+  // console.log(cardList);
+  // console.log(statusList);
 
   return (
     <main class="main">
@@ -15,7 +15,7 @@ function Main() {
               return (
                 <MainColumn title={status}>
                   <Cards
-                    array={cardList.filter((card) => card.status === status)}
+                    array={arrayList.filter((card) => card.status === status)}
                   />
                 </MainColumn>
               );

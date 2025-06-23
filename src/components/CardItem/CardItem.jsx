@@ -1,8 +1,8 @@
 import CardDate from "../CardDate/CardDate";
 
-function CardItem({ color, theme, title, date }) {
+function CardItem({ id, color, theme, title, date }) {
   return (
-    <div class="cards__item">
+    <div class="cards__item" key={id}>
       <div class="cards__card card">
         <div class="card__group">
           <div className={`card__theme ${color}`}>
