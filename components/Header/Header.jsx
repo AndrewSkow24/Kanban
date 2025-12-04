@@ -1,55 +1,70 @@
 import { useState } from "react";
+import SContainer from "../Container/Container.styled";
+import { ButtonHover3 } from "../Button/Button.styled.js";
+
+import {
+  SHeader,
+  HeaderBlock,
+  HeaderLogo,
+  HeaderNav,
+  HeaderPopUserSet,
+  HeaderBtnMainNew,
+  HeaderUser,
+  PopUserSetName,
+  PopUserSetMail,
+  PopUserSetTheme,
+} from "./Header.Styled.js";
 
 const Header = () => {
   const [userWindowIsOpen, setUserWindowIsOpen] = useState(false);
 
   return (
-    <header className="header">
-      <div className="container">
-        <div className="header__block">
-          <div className="header__logo _show _light">
+    <SHeader>
+      <SContainer>
+        <HeaderBlock>
+          <HeaderLogo>
             <a href="" target="_self">
-              <img src="../public/images/logo.png" alt="logo" />
+              <img src="images/logo.png" alt="logo" />
             </a>
-          </div>
-          <div className="header__logo _dark">
+          </HeaderLogo>
+
+          <HeaderLogo>
             <a href="" target="_self">
               <img src="images/logo_dark.png" alt="logo" />
             </a>
-          </div>
-          <nav className="header__nav">
-            <button className="header__btn-main-new _hover01" id="btnMainNew">
-              <a href="#popNewCard">Создать новую задачу</a>
-            </button>
-            <a
-              className="header__user _hover02"
-              onClick={() => setUserWindowIsOpen(!userWindowIsOpen)}
-            >
-              Иван Иванов
-            </a>
+          </HeaderLogo>
 
-            <div
-              className="header__pop-user-set pop-user-set"
+          <HeaderNav>
+            <HeaderBtnMainNew id="btnMainNew">
+              <a href="#popNewCard">Создать новую задачу</a>
+            </HeaderBtnMainNew>
+
+            <HeaderUser onClick={() => setUserWindowIsOpen(!userWindowIsOpen)}>
+              Иван Иванов
+            </HeaderUser>
+
+            <HeaderPopUserSet
               id="user-set-target"
               style={
                 userWindowIsOpen ? { display: "block" } : { display: "none" }
               }
             >
-              {/* <!-- <a href="">x</a> --> */}
-              <p className="pop-user-set__name">Ivan Ivanov</p>
-              <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
-              <div className="pop-user-set__theme">
+              <PopUserSetName>Иван Петров</PopUserSetName>
+              <PopUserSetMail>ivan.ivanov@gmail.com</PopUserSetMail>
+              <PopUserSetTheme>
                 <p>Темная тема</p>
-                <input type="checkbox" class="checkbox" name="checkbox" />
-              </div>
-              <button type="button" className="_hover03">
+                <input type="checkbox" name="checkbox" />
+              </PopUserSetTheme>
+
+              <ButtonHover3>
                 <a href="#popExit">Выйти</a>
-              </button>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
+                <input type="checkbox" name="checkbox" />
+              </ButtonHover3>
+            </HeaderPopUserSet>
+          </HeaderNav>
+        </HeaderBlock>
+      </SContainer>
+    </SHeader>
   );
 };
 
